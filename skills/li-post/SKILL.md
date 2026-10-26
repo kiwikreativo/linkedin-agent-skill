@@ -16,11 +16,15 @@ posted it.
 
 ## Before you write
 
-1. Read `~/.claude/linkedin/voice.md` if it exists. That file is the user's
+1. Use the selected voice profile. The default is
+   `~/.agents/skills/linkedin-agent/voice.md`; set
+   `LINKEDIN_AGENT_HOME` to use another private data directory, or select a
+   named profile at `profiles/<name>.md` under that directory. Ask which
+   profile to use when the user has multiple profiles and has not selected one.
+   If no profile exists, ask for **three of their own past posts**, infer the
+   voice from those, and offer to save it. Do not skip this and do not invent a
+   voice. A post in the wrong voice is worse than no post. This file is the user's
    voice profile: how they talk, what they never say, who they are talking to.
-   If it does not exist, ask for **three of their own past posts**, infer the
-   voice from those, and write the file. Do not skip this and do not invent a
-   voice. A post in the wrong voice is worse than no post.
 2. Read `hooks.json` in this folder. All 21 formulas, with templates, filled
    examples, what each is for, and how each one usually gets ruined.
 3. If the idea is thin - "post about AI" - do not pad it. Ask one batched
@@ -71,8 +75,10 @@ Reply "yes" to log it, or tell me what to change.
 ```
 
 **5. Never publish.** This skill produces text. The user posts it. On "yes",
-append the post to `~/.claude/linkedin/log.md` with the date, the hook used
-and the first line, so `/li-audit` has a history to work from later.
+append the post to `$LINKEDIN_AGENT_HOME/log.md` (default:
+`~/.agents/skills/linkedin-agent/log.md`) with the date, the hook used and the
+first line, so `$li-audit` has a history to work from later. Save only after
+the user's explicit yes.
 
 ## Rules that make the difference
 
@@ -92,7 +98,7 @@ and the first line, so `/li-audit` has a history to work from later.
 ## Example
 
 ```
-/li-post we built an internal tool that cut proposal time from 5 hours to 20 min
+$li-post we built an internal tool that cut proposal time from 5 hours to 20 min
 ```
 
 ```
