@@ -14,7 +14,11 @@ gets executed. Run it once a week, on the same day.
 
 ## Input
 
-If `~/.claude/linkedin/voice.md` and `log.md` exist, read them - the plan
+Use the selected voice profile from `LINKEDIN_AGENT_HOME` (default:
+`~/.agents/skills/linkedin-agent/voice.md`; named profiles live in
+`profiles/<name>.md`) and read `log.md` from the same directory if it exists.
+If the user has multiple profiles and has not selected one, ask which to use.
+The plan
 should not repeat a theme from the last fortnight. If they do not exist, ask
 for four things and write them down:
 
@@ -90,5 +94,6 @@ ENGAGE  (5 reach / 3 peers / 2 buyers)
 Say "write Tuesday" and I will draft it.
 ```
 
-Write the plan to `~/.claude/linkedin/plan.md` so the other skills can read it.
+Write the plan to `$LINKEDIN_AGENT_HOME/plan.md` (default:
+`~/.agents/skills/linkedin-agent/plan.md`) so the other skills can read it.
 Nothing is scheduled or posted anywhere - this is a plan, and the user runs it.

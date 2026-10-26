@@ -1,12 +1,22 @@
 # voice.md
 
-Copy this to `~/.claude/linkedin/voice.md` and fill it in. Every skill in the
-pack reads it. Ten minutes here is the difference between drafts you post and
-drafts you rewrite.
+Save the default profile as `~/.agents/skills/linkedin-agent/voice.md`.
+Optional profiles can be saved as
+`~/.agents/skills/linkedin-agent/profiles/<name>.md`. Set
+`LINKEDIN_AGENT_HOME` to a different private data directory; all skills use
+that directory consistently. Keep these personal files out of version control.
+Ten minutes here is the difference between drafts you post and drafts you rewrite.
 
 If you would rather not fill it in by hand, paste three of your own posts into
-Claude and say "write my voice.md from these". That works better than guessing
-at the answers.
+Codex and ask it to draft this profile from them. That works better than
+guessing at the answers.
+
+Personal example: save a copy as `profiles/personal.md` and fill in only facts
+you provide.
+
+Business example: save a separate copy as `profiles/business.md`; describe the
+business voice, audience, proof, and approved claims without adding personal
+details you have not supplied.
 
 ---
 

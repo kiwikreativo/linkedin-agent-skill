@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 *.tmp
+voice.md
+profiles/
+plan.md
+log.md

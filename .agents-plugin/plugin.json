@@ -1,0 +1,11 @@
+{
+  "name": "linkedin-agent",
+  "version": "1.0.0",
+  "description": "Eleven LinkedIn writing and planning skills with local humanization utilities.",
+  "author": { "name": "Jake Schincariol", "url": "https://opusjake.ai" },
+  "homepage": "https://opusjake.ai/r/linkedin-agent",
+  "repository": "https://github.com/Jakeschincariol/linkedin-agent-skill",
+  "license": "MIT",
+  "keywords": ["linkedin", "content", "writing", "humanizer", "social", "marketing"],
+  "skills": "../skills"
+}
